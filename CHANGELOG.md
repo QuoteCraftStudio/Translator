@@ -1,24 +1,26 @@
 # QuoteCraft Translator — Changelog
 
-## v1.1.0-preview — 2026-10-24
-- Added 31 African language and regional-voice choices, retaining all 18 original language choices.
-- Languages include Zulu, Xhosa, Swahili (Kenya and Tanzania), Afrikaans, Amharic, Yoruba, Igbo, Hausa, Somali, Shona, Sesotho, Setswana, Kinyarwanda, Kirundi, Wolof and more.
-- Regional voice choices (for example Swahili Kenya/Tanzania and Arabic Egypt/Morocco/Sudan) map to the same written translation language; this does **not** provide authentic region-specific dialect translation.
-- Added an optional typed-text translation input to both sides so languages can still be used when the browser has no matching speech-recognition service.
-- Left the existing two hold-to-talk buttons, capture/release behavior, speech playback, source/target swap, donations and local language-choice persistence intact.
-- Added accessible labels and clear messages when browser speech support is missing.
-- Updated the privacy disclosure to explain typed-text submission to MyMemory.
-- All work is on the `feature/african-languages-2026-10-24` development branch; the stable `main` branch and all Language Lounge files are unchanged.
+## v1.1.2-preview — 2026-10-24
+- Continued work on the **existing** QuoteCraft Translator HTML. The Language Lounge app is excluded and unchanged.
+- Removed all typed-message input boxes and typed-send buttons; restored the original voice-only, two-microphone interface.
+- Kept the original 18 language options and donation, swap, press-and-hold, recognition and playback behavior.
+- Reduced 31 speculative additions to 11 documented African speech-recognition locale candidates: Afrikaans (af-ZA), Amharic (am-ET), Hausa (ha-NG), Igbo (ig-NG), Kinyarwanda (rw-RW), Shona (sn-ZW), Swahili (Kenya sw-KE; Tanzania sw-TZ), Xhosa (xh-ZA), Yoruba (yo-NG), Zulu (zu-ZA).
+- **New African languages only appear on a particular device if its browser supplies an exact matching speech-synthesis voice**. Availability refreshes when browser voices load or change.
+- If speech recognition rejects one of these added languages during a session, it is removed from the selector for that session.
+- African playback requires an exact locale-specific voice and will no longer silently substitute an unrelated voice.
+- No claims of distinct dialect translation are made. Regional Swahili selections use the same written translation code.
+- Only the development branch was updated; production `main`, live website, and Language Lounge remain unmodified.
 
-### Validation
-- Inline JavaScript syntax compilation passed.
-- Language IDs and BCP 47 speech locales passed uniqueness/format checks.
-- Six DOM-stub smoke tests passed: grouped language menus, typed translation request, output display, speech playback call, same-written-language regional variants, retained voice button event handlers, and text entry available when voice recognition is unavailable.
-- Live MyMemory API response quality, actual microphone permissions, and speech voices **have not** been tested on a phone or browser.
+### Tests performed
+- JavaScript compiled successfully.
+- 10/10 DOM-stub regression checks passed, including: retained existing 18 options; no African options without matching voices; exact voice locale filtering; regional filtering; maintaining microphone handlers; removing a rejected recognition locale; and no text-entry controls.
+- Real microphone input, mobile browser voice catalog, MyMemory translation quality/coverage, and playback on physical devices **have not been verified**.
 
-### Known limitations
-- MyMemory's available language pairs and translation quality are not guaranteed, especially for lower-resource languages.
-- Browser support for speech recognition and synthesized voices varies by device and language. Typed text is the fallback.
-- Text translation is not a true dialect-specific interpreter. Regional variants change the requested browser speech locale but reuse standard written translation codes.
-- The existing hold-to-talk behavior remains; this update does not add voice-activated conversation.
-- Nothing is deployed or published.
+### Important limitations
+- Google Cloud's documented speech-recognition locale lists are only a source for **candidates**; this app uses the browser Web Speech API, whose support can differ. The app does not connect directly to Google Cloud Speech.
+- A synthesized voice being installed does not by itself guarantee the browser can recognize that language; unsupported recognition languages are removed if the browser reports failure.
+- The existing MyMemory translation API may not provide good translations for every language pair, and network availability is required.
+- Publishing or deployment has **not** been authorized or performed.
+
+## v1.1.0-preview — 2026-10-24 (superseded on development branch)
+- Initial speculative African language list and typed fallback. These were subsequently removed in response to the owner's requirements.
