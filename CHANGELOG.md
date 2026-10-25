@@ -1,5 +1,13 @@
 # QuoteCraft Translator — Changelog
 
+## v1.1.3-preview — 2026-10-25
+- Fixed a startup crash: an empty `<select>` was read before any language options existed. Language menus now populate before saved selections and direction labels are used.
+- Preserved stored language choices for initialization and kept the existing two-voice-button behavior.
+- Added `tests/translator-startup.test.cjs`: six built-in Node-style regression tests covering first launch, valid/invalid saved selections, African voice gating, late voice availability, and voice-only controls.
+- Verified all six tests using a V8/DOM simulation of the checked-in test harness; checked inline JavaScript syntax. Native Node execution, physical device speech, actual translation requests, and live website publishing were not tested here.
+- Work remains solely on the existing Translator development branch. `main`, production website, and Language Lounge are unchanged.
+
+
 ## v1.1.2-preview — 2026-10-24
 - Continued work on the **existing** QuoteCraft Translator HTML. The Language Lounge app is excluded and unchanged.
 - Removed all typed-message input boxes and typed-send buttons; restored the original voice-only, two-microphone interface.
