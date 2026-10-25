@@ -1,24 +1,24 @@
 # QuoteCraft Translator — Progress
 
 Date: 2026-10-24
-Version: v1.1.0-preview
-Objective: Add African languages and regional speech choices to the **separate QuoteCraft Translator**, without changing Language Lounge.
+Current version: v1.1.2-preview
+Objective: Add only voice-capable African options to the user's **existing QuoteCraft Translator**, preserving the current two-button voice design. Leave QuoteCraft Language Lounge completely alone.
 
-## Completed, saved and verified
-1. Created independent GitHub branch `feature/african-languages-2026-10-24` from the existing `main`.
-2. Added 31 African-language/regional choices, preserving the original 18.
-3. Added manual text translation entry for both speakers; preserved the original microphone flow.
-4. Updated interface guidance and privacy disclosure.
-5. Verified JavaScript syntax and ran 6/6 DOM-stub smoke tests with mocked translation/network/speech.
-6. Recorded changes in `CHANGELOG.md`.
+## Completed and checkpointed
+1. Located existing repository `QuoteCraftStudio/Translator` and original HTML file.
+2. Preserved stable `main`; modifications remain in `feature/african-languages-2026-10-24`.
+3. Removed manual typing fields added in the earlier preview.
+4. Curated 11 African locale candidates from documented speech languages. They appear only when the browser reports an exact matching speech-output voice; recognition errors remove an option for the session.
+5. Preserved the original 18 language choices, both hold-to-speak buttons, translation handling, swap, local language preferences and donation link.
+6. Verified 10/10 mocked-DOM smoke/regression checks and JavaScript syntax; refreshed documentation.
 
-## Unfinished / must verify before publishing
-- Check genuine translation results for chosen African-language pairs on live MyMemory service.
-- Check mobile microphone permissions, voice recognition, voices, playback and typing in Chrome/Android and desktop browsers.
-- Verify unusual text lengths and quality for non-Latin scripts with real APIs.
-- Obtain explicit owner approval before merging, publishing to a website, or replacing a distributed app.
+## Outstanding checks
+- On a real phone, validate voice recognition **and** speech playback in selected languages, especially Afrikaans, Swahili, Zulu and Xhosa.
+- Test MyMemory API result quality for supported language pairs.
+- Confirm the deployed website's Translator.html is based on the same source; the public quotecraftstudio.ca pages could not be retrieved via the web tool.
+- Seek explicit authorization before publishing, merging into `main`, or replacing website assets.
 
-## Notes
-- No Language Lounge files were edited.
-- No production branch or website was changed.
-- The original GitHub `main` file is the recovery backup; original Translator.html blob SHA `cf466825337cff3bb9977a299a12f394f1e49b9d`.
+## Safety
+- QuoteCraft Language Lounge is untouched.
+- Stable repository main remains unchanged.
+- No live website or APK was updated.
