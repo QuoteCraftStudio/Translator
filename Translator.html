@@ -30,15 +30,17 @@ function supportedAfricanLanguages(){return Recognition&&window.speechSynthesis?
 function refreshLanguageMenus(){
  const available=supportedAfricanLanguages();
  selects.forEach((s,i)=>{
-  const selected=s.value|| (i?'fr':'en'),other=document.createElement('optgroup');
+  const selected=s.value||storedLanguageChoices[i]||(i?'fr':'en'),other=document.createElement('optgroup');
   other.label='Languages';baseLanguages.forEach(([code,name])=>other.appendChild(new Option(name,code)));
   s.replaceChildren(other);
   if(available.length){const africa=document.createElement('optgroup');africa.label='African languages (voice available on this device)';available.forEach(([code,name])=>africa.appendChild(new Option(name,code)));s.append(africa)}
   s.value=[...baseLanguages,...available].some(l=>l[0]===selected)?selected:(i?'fr':'en');
  });remember();
 }
-selects.forEach((s,i)=>{s.value=i?'fr':'en';s.addEventListener('change',remember)});
-try{let v=JSON.parse(localStorage.getItem('qc-translator-languages'));if(Array.isArray(v))v.forEach((x,i)=>{if(i<2&&languages.some(l=>l[0]===x))selects[i].value=x})}catch{}remember();
+let storedLanguageChoices=[];
+try{const saved=JSON.parse(localStorage.getItem('qc-translator-languages'));if(Array.isArray(saved))storedLanguageChoices=[0,1].map(i=>languages.some(l=>l[0]===saved[i])?saved[i]:null)}catch{}
+// Attach handlers now; first populate the selects before reading their values.
+selects.forEach(s=>s.addEventListener('change',remember));
 $('swap').onclick=()=>{const v=selects[0].value;selects[0].value=selects[1].value;selects[1].value=v;remember()};
 function loadVoices(){voices=window.speechSynthesis?.getVoices()||[];refreshLanguageMenus()}loadVoices();if(window.speechSynthesis)speechSynthesis.onvoiceschanged=loadVoices;
 function showTranslation(i,text){const result=$('translation'+i);result.textContent=text;result.lang=selects[i].value;result.dir='auto';}
