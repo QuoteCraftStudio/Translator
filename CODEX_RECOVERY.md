@@ -1,44 +1,42 @@
 # QuoteCraft Translator — Recovery Notes
 
-- Project: QuoteCraft Studio / Translator
-- Canonical source: https://github.com/QuoteCraftStudio/Translator
-- Project path in repository: `Translator.html`; no local machine checkout was made during this chat.
+- Project: **QuoteCraft Studio / existing Translator** (not Language Lounge)
+- GitHub remote: `https://github.com/QuoteCraftStudio/Translator`
+- Repository source: `Translator.html`
+- Local filesystem checkout: none; work performed on connected GitHub.
 - Date: 2026-10-24
-- Version: v1.1.0-preview (not released)
-- Remote: GitHub `QuoteCraftStudio/Translator`
-- Working branch: `feature/african-languages-2026-10-24`
-- Last verified Translator.html code commit: `f4ea8532a2df222698c909ef582cc01e8f9dd3d4`
-- Original stable file SHA (main): `cf466825337cff3bb9977a299a12f394f1e49b9d`
-- Stable main was preserved as the rollback copy. No production deploy, no app store release.
-- Backup location: existing `main` branch and `archive/` directory in the GitHub Translator repository; original `main` SHA above verified before edits.
-- Changed files in development branch: `Translator.html`, `CHANGELOG.md`, `PROGRESS.md`, this recovery file.
-- Language Lounge project: explicitly excluded, not modified.
+- Current preview: **v1.1.2-preview**
+- Development branch: `feature/african-languages-2026-10-24`
+- Last verified code commit: `63df4ea17c7ad513222ed984b4c01c841df3e954`
+- Development HTML blob SHA: `cb9e206f250d951aa78cf3a6f6d3b5da112985bd`
+- Stable original `main` HTML blob SHA: `cf466825337cff3bb9977a299a12f394f1e49b9d` (recovery baseline).
+- Backup: stable original `main` branch; no production files were changed.
+- Files changed on development branch: `Translator.html`, `CHANGELOG.md`, `PROGRESS.md`, `CODEX_RECOVERY.md`.
+- No untracked local working files were created.
 
-## Implemented
-- African language catalog + regional browser speech tags, 31 additional choices.
-- Canonical written translation codes for regional variants; modern Arabic regional variants use the ordinary Arabic translation code.
-- Two optional typed-message inputs and send buttons; old press-and-hold voice system preserved.
-- Speech-unsupported error guidance and corrected typed-message privacy disclosure.
+## Verified changes
+- Existing two voice buttons remain; no typing UI or typed JS.
+- 18 original language options preserved; 11 African locale candidates considered for dynamic presentation.
+- African options hidden unless a device exact-locale synthesized voice exists; recognition errors also hide failed locales during the current session.
+- Existing translation, speech and donation architecture retained; no new secrets or third-party dependencies.
 
-## Verified
-- JavaScript inline script compiled successfully.
-- Catalog IDs unique; speech locale strings valid.
-- Six browser-DOM mock smoke cases passed (language grouping; translation request/display; synthesized voice callback; same-written-language regional mapping; existing voice handlers; typed fallback in the absence of recognition).
-- Two independent code commits verified through GitHub fetch; later documentation commits saved through connector.
+## Validation
+- Compiled inline JavaScript with JS function constructor.
+- 10/10 simulated UI tests passed for language filters and voice handlers. Simulated tests do **not** prove that the real browser can recognize speech or translate accurately.
+- Real device/audio/MyMemory and website-deployment checks outstanding.
 
-## Not verified
-- No real browser or Android microphone permission test.
-- No live MyMemory provider response test for the new African language pairs; support/quality may be limited.
-- No APK generated or signed; no code-signing key was needed.
-- No real website, production deployment, or public user-facing release changed.
+## Safe recovery
+1. `git clone https://github.com/QuoteCraftStudio/Translator.git`
+2. `cd Translator`
+3. `git switch feature/african-languages-2026-10-24`
+4. Open `Translator.html` using an HTTPS host for meaningful microphone testing.
+5. `git diff main...feature/african-languages-2026-10-24 -- Translator.html`
+6. `git switch main` returns to the unchanged original release.
 
-## Reproduce / restore
-1. Clone: `git clone https://github.com/QuoteCraftStudio/Translator.git`
-2. Enter checkout: `cd Translator`
-3. Review preview: `git switch feature/african-languages-2026-10-24`
-4. Open `Translator.html` in a browser to test typed translation; use HTTPS origin for the most reliable microphone permissions.
-5. Compare to stable: `git diff main...feature/african-languages-2026-10-24 -- Translator.html`
-6. Return to stable: `git switch main` (no destructive reset necessary).
+## Critical boundaries
+- User explicitly forbids changes to **QuoteCraft Language Lounge**; do not modify it.
+- Do not publish, merge, or update quotecraftstudio.ca without separate owner authorization.
+- The GitHub HTML source has not yet been proven to match the exact currently published WHC website asset.
 
-## Next single action
-Manually test the branch's `Translator.html` on an HTTPS webpage or a compatible device for a few African-language pairs, then obtain explicit owner approval before merging or publishing.
+## Single next action
+Test the preview in a real mobile browser with installed African-language voice support and a live MyMemory translation result before requesting approval to publish the existing website Translator.
