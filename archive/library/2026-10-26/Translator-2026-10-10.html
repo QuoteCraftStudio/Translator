@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ec"><title>Quote Craft · Translator</title><meta name="application-name" content="Quote Craft Translator"><meta name="theme-color" content="#147d83"><meta name="description" content="A calmer way to connect. Two languages, two talk buttons. Hold to speak and hear a translation with Quote Craft Translator."><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{font-family:'DM Sans',sans-serif;color:#253d3d;background:#f5f3ec;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,select{font:inherit}button{cursor:pointer}header{max-width:1160px;margin:auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:center}.brand{font:800 20px Manrope,sans-serif;letter-spacing:-.7px}.brand span{display:inline-grid;place-items:center;background:#253d3d;color:#f5f3ec;width:34px;height:34px;border-radius:11px;margin-right:10px;font-size:16px}.tag{font-size:12px;letter-spacing:1.2px;color:#6a7d76;text-transform:uppercase}main{max-width:1000px;margin:35px auto 0;padding:0 28px;text-align:center}.eyebrow{display:inline-block;color:#557b6d;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}h1{font:600 clamp(34px,5vw,58px)/1.13 Manrope,sans-serif;letter-spacing:-2.4px;margin:18px 0}h1 em{font-style:normal;color:#2c897d}.intro{color:#70807a;line-height:1.6;margin:0 0 30px}.status{min-height:44px;display:flex;gap:9px;align-items:center;justify-content:center;font-size:14px;color:#47675e}.dot{width:7px;height:7px;background:#63a494;border-radius:50%}.panels{display:grid;grid-template-columns:1fr;align-items:center;gap:16px;margin:18px auto 0;max-width:560px}.panel{text-align:left;padding:26px;border-radius:26px;background:#e6eee8;border:1px solid #d9e4dc}.panel.blue{background:#e5ebf1;border-color:#d8e0e9}.panel-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.person{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}.number{border:1px solid #c4d5cc;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;font-size:12px;color:#73867c}label{display:block;font-size:12px;color:#74867a;margin-bottom:8px}select{width:100%;padding:14px 12px;background:#ffffffb0;border:1px solid #cfdbd2;border-radius:12px;font-size:18px;color:#253d3d;outline-offset:4px}.talk{touch-action:none;user-select:none;-webkit-user-select:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;height:140px;margin-top:14px;background:#338577;color:white;border:0;border-radius:20px;box-shadow:0 6px 0 #266d62;transition:transform .15s,background .15s}.blue .talk{background:#55799d;box-shadow:0 6px 0 #416081}.talk svg{width:30px;height:30px}.talk strong{font:600 21px Manrope,sans-serif}.talk small{color:#e3f0ec;font-size:12px}.talk.held{transform:translateY(5px);box-shadow:none;background:#21675d}.blue .talk.held{background:#3a5d80}.talk:disabled{opacity:.45;cursor:default}.direction{color:#698077;font-size:12px;text-align:center;margin:22px 0 0}.swap{justify-self:center;display:grid;place-items:center;width:44px;height:44px;border:1px solid #d9dfd7;border-radius:50%;background:#fff9;color:#577568;font-size:23px}.controls{display:flex;flex-direction:column;justify-content:center;gap:12px;max-width:560px;margin:29px auto 20px}.control{display:flex;gap:8px;align-items:center;justify-content:center;background:#fff8;border:1px solid #dce1d7;border-radius:100px;padding:12px 22px;color:#38594f;font-size:13px}.control:disabled{opacity:.4;cursor:default}#message{font-size:13px;line-height:1.6;color:#925441;max-width:650px;margin:auto;min-height:22px}.steps{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin:33px 0 38px;font-size:12px;color:#7c8980}.steps b{color:#527c6d;margin-right:7px}footer{max-width:1000px;margin:auto;padding:22px 28px;border-top:1px solid #dfe3d8;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#839084}details{text-align:left;max-width:560px}summary{cursor:pointer;color:#657d70}details p{line-height:1.8}a{color:inherit}button:focus-visible{outline:3px solid #c89048;outline-offset:5px}.pulse .dot{animation:pulse 1s infinite}@keyframes pulse{50%{opacity:.3}}@media(max-width:650px){header{padding:20px}.tag{font-size:10px}main{margin-top:20px;padding:0 16px}h1{letter-spacing:-1.5px}.panels{grid-template-columns:1fr;gap:12px}.swap{width:38px;height:38px}.panel{padding:18px 12px;border-radius:22px}.panel-top{margin-bottom:18px}.talk{height:125px;border-radius:16px}.talk strong{font-size:17px}.talk small{font-size:10px}select{font-size:16px}.direction{font-size:11px}.intro{font-size:14px}.steps{gap:15px;margin:28px 0}.controls{margin-top:25px}footer{flex-direction:column;gap:12px}header .brand{font-size:18px}.tag{max-width:80px;text-align:right}}
+
+.panel.blue{transform:rotate(180deg)}.translation{margin-top:14px;padding:12px 14px;background:#ffffffb0;border:1px solid #cfdbd2;border-radius:12px;min-height:60px;max-height:125px;overflow:auto}.translation p{margin:0;font-size:16px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;text-align:start;unicode-bidi:plaintext}.controls{align-items:center;margin:20px auto}.donate{display:inline-block;padding:9px 20px;border-radius:100px;border:1px solid #cddbd1;background:#fff9;color:#38594f;font:600 13px 'DM Sans',sans-serif;text-decoration:none;min-height:40px}.donate:focus-visible{outline:3px solid #c89048;outline-offset:4px}@media(max-width:650px){h1{font-size:30px;margin:12px 0}.intro{margin-bottom:14px}.translation{font-size:15px;max-height:110px}header{padding:16px 20px}}
+</style></head><body>
+<header><div class="brand"><span>qc</span>Quote Craft</div><div class="tag">Made to connect</div></header>
+<main><span class="eyebrow">Conversation, made simpler</span><h1>Different languages.<br><em>One conversation.</em></h1><p class="intro">Hold to speak. Release to translate.<br>Let the conversation flow.</p><div id="status" class="status" role="status" aria-live="polite"><span class="dot"></span><span id="state">Choose your languages to begin</span></div>
+<div class="panels"><section class="panel blue"><div class="panel-top"><span class="person">Their side</span><span class="number">02</span></div><label for="lang1">They speak</label><select id="lang1" aria-label="Their language"></select><button id="talk1" class="talk" aria-label="Hold to speak in their language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0014 0v-2M12 19v3M8 22h8"/></svg><strong>Hold to talk</strong><small>Release to translate</small></button><p class="direction" id="dir1"></p><div class="translation" aria-label="Translation for this side"><p id="translation1" lang="en" dir="auto" role="status" aria-live="polite">Translated words will appear here.</p></div></section><button id="swap" class="swap" aria-label="Swap languages">⇄</button><section class="panel"><div class="panel-top"><span class="person">Your side</span><span class="number">01</span></div><label for="lang0">I speak</label><select id="lang0" aria-label="Your language"></select><button id="talk0" class="talk" aria-label="Hold to speak in your language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0014 0v-2M12 19v3M8 22h8"/></svg><strong>Hold to talk</strong><small>Release to translate</small></button><p class="direction" id="dir0"></p><div class="translation" aria-label="Translation for this side"><p id="translation0" lang="en" dir="auto" role="status" aria-live="polite">Translated words will appear here.</p></div></section></div>
+<div class="controls"><button id="stopAudio" class="control" type="button">Stop audio</button><a class="donate" href="https://www.paypal.me/msimmonite" target="_blank" rel="noopener noreferrer">Donate</a></div><p id="message" role="alert"></p><div class="steps"><span><b>01</b>Choose languages</span><span><b>02</b>Hold your button</span><span><b>03</b>Listen & reply</span></div></main>
+<footer><span>Quote Craft · Translator <span style="margin-left:8px">Early access</span></span><details><summary>About audio & privacy</summary><p>Open this link in Chrome or Safari rather than inside Facebook. Microphone access and an internet connection are required. Speech recognition may send audio to your browser’s speech provider. Recognized words are sent to MyMemory for translation; its free daily allowance is limited. Quote Craft does not save conversations. Language choices are remembered on this device. Voices and available languages depend on your device and browser. Translated words remain on screen until the next sentence for that side or a language change, and are not saved. Keep sentences short. Translations can contain mistakes.</p><a href="https://mymemory.translated.net/doc/usagelimits.php" target="_blank" rel="noopener">Translation service limits</a></details></footer>
+<script>
+const languages=[['en','English','en-CA'],['fr','French','fr-CA'],['es','Spanish','es-ES'],['th','Thai','th-TH'],['de','German','de-DE'],['it','Italian','it-IT'],['pt','Portuguese','pt-BR'],['zh','Chinese','zh-CN'],['ja','Japanese','ja-JP'],['ko','Korean','ko-KR'],['ar','Arabic','ar-SA'],['hi','Hindi','hi-IN'],['uk','Ukrainian','uk-UA'],['ru','Russian','ru-RU'],['tl','Filipino','fil-PH'],['vi','Vietnamese','vi-VN'],['pl','Polish','pl-PL'],['pa','Punjabi','pa-IN']];
+const $=id=>document.getElementById(id),selects=[$('lang0'),$('lang1')],buttons=[$('talk0'),$('talk1')],Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+let busy=false,active=null,held=false,last=null,utterance=null,voices=[],speaking=false,pendingFinish=null,captureTimer=null;
+function status(s,pulse=false){$('state').textContent=s;$('status').classList.toggle('pulse',pulse)}
+function message(s=''){$('message').textContent=s}
+function lock(value){busy=value;selects.forEach(e=>e.disabled=value);$('swap').disabled=value;buttons.forEach(e=>e.disabled=value||!Recognition||!window.speechSynthesis)}
+function remember(){try{localStorage.setItem('qc-translator-languages',JSON.stringify(selects.map(s=>s.value)))}catch{} selects.forEach((s,i)=>{$('translation'+i).textContent='Translated words will appear here.';$('translation'+i).lang=s.value;});selects.forEach((s,i)=>$('dir'+i).textContent=languages.find(l=>l[0]===s.value)[1]+' → '+languages.find(l=>l[0]===selects[1-i].value)[1])}
+selects.forEach((s,i)=>{languages.forEach(([code,name])=>s.add(new Option(name,code)));s.value=i?'fr':'en';s.addEventListener('change',remember)});
+try{let v=JSON.parse(localStorage.getItem('qc-translator-languages'));if(Array.isArray(v))v.forEach((x,i)=>{if(i<2&&languages.some(l=>l[0]===x))selects[i].value=x})}catch{}remember();
+$('swap').onclick=()=>{const v=selects[0].value;selects[0].value=selects[1].value;selects[1].value=v;remember()};
+function loadVoices(){voices=window.speechSynthesis?.getVoices()||[]}loadVoices();if(window.speechSynthesis)speechSynthesis.onvoiceschanged=loadVoices;
+function showTranslation(i,text){const result=$('translation'+i);result.textContent=text;result.lang=selects[i].value;result.dir='auto';}
+async function translate(text,source,target){if(source===target)return text;if(new TextEncoder().encode(text).length>500)throw Error('That sentence was too long. Please try a shorter phrase.');let controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);try{const url=new URL('https://api.mymemory.translated.net/get');url.search=new URLSearchParams({q:text,langpair:source+'|'+target});const res=await fetch(url,{signal:controller.signal,referrerPolicy:'no-referrer'});if(!res.ok)throw Error('The translation service is unavailable. Please try again.');const data=await res.json();if(Number(data.responseStatus)!==200||data.quotaFinished)throw Error(data.quotaFinished?'The free translation allowance has been reached. Please try again tomorrow.':'This translation was unavailable. Try a shorter phrase or another language.');if(!data.responseData?.translatedText)throw Error('No translation was returned. Please try again.');const decoder=document.createElement('textarea');decoder.innerHTML=data.responseData.translatedText;return decoder.value}finally{clearTimeout(timer)}}
+let session=0, audioTimer=null, finishTimer=null, inputOwner=null, playedSession=-1;
+function resetButtons(){buttons.forEach(b=>{b.classList.remove('held');b.querySelector('strong').textContent='Hold to talk';});}
+function stopAll(){
+ session++; held=false; inputOwner=null; pendingFinish=null;
+ clearTimeout(captureTimer);clearTimeout(finishTimer);clearTimeout(audioTimer);
+ const r=active;active=null;
+ if(r){r.onstart=r.onresult=r.onerror=r.onend=null;try{r.abort();}catch{}}
+ utterance=null;speaking=false;window.speechSynthesis?.cancel();
+ resetButtons();lock(false);status('Ready · hold either button to speak');
+}
+function play(){
+ if(!last||busy||active||held||speaking||playedSession===session)return;
+ playedSession=session;
+ speechSynthesis.cancel();
+ const current=new SpeechSynthesisUtterance(last.text);utterance=current;
+ current.lang=last.locale;current.rate=.95;
+ const list=voices.filter(v=>v.lang.split('-')[0]===last.locale.split('-')[0]);
+ current.voice=list.find(v=>v.lang===last.locale)||list[0]||null;
+ speaking=true;lock(true);status('Speaking in '+last.name,true);
+ const done=()=>{if(utterance!==current)return;clearTimeout(audioTimer);utterance=null;speaking=false;lock(false);status('Ready for the next reply');};
+ current.onend=done;current.onerror=()=>{done();message('Audio stopped. The translation is still on screen.');};
+ // A stalled device voice must never speak indefinitely.
+ audioTimer=setTimeout(()=>{if(utterance!==current)return;stopAll();message('Audio stopped after the time limit.');},90000);
+ try{speechSynthesis.speak(current);}catch{done();message('Audio could not start. Read the translation on screen.');}
+}
+function start(i){
+ if(busy||active||speaking||held||document.hidden)return false;
+ const turn=++session;held=true;message();speechSynthesis.cancel();lock(true);
+ const source=selects[i].value,target=selects[1-i].value,r=new Recognition();
+ let transcript='',ended=false,processed=false,failed=false;
+ active=r;r.lang=languages.find(l=>l[0]===source)[2];r.continuous=false;r.interimResults=false;
+ // Keep the pressed button enabled so it receives its release event.
+ buttons[i].disabled=false;buttons[i].classList.add('held');buttons[i].querySelector('strong').textContent='Listening…';
+ status('Listening · release when you’re finished',true);
+ async function finish(){
+  if(turn!==session||processed||!ended||held)return;
+  processed=true;pendingFinish=null;clearTimeout(finishTimer);
+  if(failed||!transcript){lock(false);if(!failed)message('No speech was heard. Hold your button and try again.');status('Ready to try again');return;}
+  status('Translating…',true);
+  try{
+   const text=await translate(transcript,source,target);
+   if(turn!==session||document.hidden)return;
+   const lang=languages.find(l=>l[0]===target);last={text,locale:lang[2],name:lang[1]};
+   showTranslation(1-i,text);lock(false);play();
+  }catch(e){if(turn!==session)return;lock(false);message(e.message||'Translation failed. Please try again.');status('Ready to try again');}
+ }
+ r.onstart=()=>{if(turn!==session||!held){try{r.stop();}catch{}}};
+ r.onresult=e=>{
+  if(turn!==session||ended||processed||transcript)return;
+  // Single-shot recognition: accept one final result, never concatenate replayed callbacks.
+  for(let n=e.resultIndex;n<e.results.length;n++)if(e.results[n].isFinal){transcript=e.results[n][0].transcript.trim();break;}
+  if(transcript){try{r.stop();}catch{}}
+ };
+ r.onerror=e=>{if(turn!==session||ended)return;failed=true;held=false;inputOwner=null;message(e.error==='not-allowed'?'Allow microphone access, then press your talk button again.':'Speech stopped. Please press your talk button again.');};
+ r.onend=()=>{
+  if(turn!==session||ended)return;ended=true;clearTimeout(captureTimer);clearTimeout(finishTimer);active=null;resetButtons();
+  if(held){pendingFinish=finish;status('Sentence captured · release your button to translate');}
+  else finish();
+ };
+ try{r.start();captureTimer=setTimeout(()=>{if(turn===session)release();},20000);}
+ catch{stopAll();message('Microphone could not start. Please try again.');return false;}
+ return true;
+}
+function release(){
+ inputOwner=null;if(!held)return;held=false;
+ if(pendingFinish){const finish=pendingFinish;pendingFinish=null;finish();return;}
+ status('Finishing your sentence…',true);
+ try{active?.stop();}catch{}
+ const turn=session;
+ finishTimer=setTimeout(()=>{if(turn===session&&active){stopAll();message('Microphone did not finish. Please try again.');}},5000);
+}
+buttons.forEach((button,i)=>{
+ button.addEventListener('pointerdown',e=>{if(e.button!==0||inputOwner)return;e.preventDefault();if(start(i)){inputOwner={pointer:e.pointerId};try{button.setPointerCapture(e.pointerId);}catch{}}});
+ button.addEventListener('lostpointercapture',e=>{if(inputOwner?.pointer===e.pointerId)release();});
+ button.addEventListener('keydown',e=>{if((e.code==='Space'||e.code==='Enter')&&!e.repeat&&!inputOwner){e.preventDefault();if(start(i))inputOwner={key:e.code};}});
+ button.addEventListener('keyup',e=>{if(inputOwner?.key===e.code){e.preventDefault();release();}});
+ button.addEventListener('contextmenu',e=>e.preventDefault());
+});
+window.addEventListener('pointerup',e=>{if(inputOwner?.pointer===e.pointerId)release();});
+window.addEventListener('pointercancel',e=>{if(inputOwner?.pointer===e.pointerId)stopAll();});
+window.addEventListener('blur',stopAll);
+window.addEventListener('pagehide',stopAll);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAll();});
+$('stopAudio').onclick=stopAll;
+
+lock(false);if(!Recognition||!window.speechSynthesis){message('This browser does not support voice translation. Open this link in Chrome or Safari and allow microphone access.');status('Voice support unavailable')}else status('Ready · hold either button to speak');
+</script></body></html>
