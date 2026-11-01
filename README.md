@@ -46,6 +46,10 @@ Open [`Translator.html`](./Translator.html) in a compatible browser to explore t
 
 No GitHub Release is currently published for this repository. When a tested release becomes available, its release notes should include the exact version, changes, testing status, and verified download assets. Do not treat a source HTML file as an Android APK.
 
+## Historical versions and archives
+
+The dated [Translator version inventory](./versions/README.md) provides **14 preserved HTML snapshots** with their original source-date labels and an explicit indication where the actual application version is unknown. The application entry point above remains unchanged. Historical APKs and signing comparisons are stored separately in the owner's private project archive, not as public GitHub releases.
+
 ## Support
 
 **QuoteCraft Studio** · [quotecraftstudio.ca](https://quotecraftstudio.ca)  
